@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>More Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 60px 20px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* 🌟 Glowing Title */
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4da6; }
+    to { text-shadow: 0 0 25px #ff1a8c, 0 0 40px #ff66cc; }
+}
+
+/* ✨ Paragraph Styling */
+.fade-text {
+    max-width: 850px;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 2;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Staggered fade-in */
+.fade-text:nth-of-type(1) { animation-delay: 1s; }
+.fade-text:nth-of-type(2) { animation-delay: 2s; }
+.fade-text:nth-of-type(3) { animation-delay: 3s; }
+.fade-text:nth-of-type(4) { animation-delay: 4s; }
+.fade-text:nth-of-type(5) { animation-delay: 5s; }
+.fade-text:nth-of-type(6) { animation-delay: 6s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* 💖 Button */
+button {
+    margin: 60px 0;
+    padding: 12px 28px;
+    font-size: 18px;
+    background-color: #ff4da6;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff1a8c;
+    transform: scale(1.1);
+}
+
+/* 💕 Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: float 7s linear infinite;
+    color: #ff4da6;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* ✨ Sparkles */
+.sparkle {
+    position: fixed;
+    color: white;
+    font-size: 14px;
+    animation: sparkleAnim 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes sparkleAnim {
+    0% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-30px); }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music (Click anywhere to start) -->
+<audio id="bgMusic" loop>
+    <source src="" type="audio/mpeg">
+</audio>
+
+<div class="content">
+
+<h1>
+You Mean Everything To Me ❤️<br>
+Happy Birthday, Steve ❤️🎉
+</h1>
+
+<p class="fade-text">
+Today is extra special because it’s the day my favorite person was born  my answered prayer, my safe place, my handsome king.
+</p>
+
+<p class="fade-text">
+Loving you is honestly my favorite thing in the world. You make me smile on my worst days, you support me in ways you don’t even realize, and you love me so beautifully and effortlessly.
+</p>
+
+<p class="fade-text">
+I’m so lucky to call you mine 🥰 You are the best thing that has ever happened to me, and every day with you feels like a blessing.
+</p>
+
+<p class="fade-text">
+As you step into this new year of your life, I pray it brings you success, happiness, open doors, and everything your heart desires.
+</p>
+
+<p class="fade-text">
+I pray that you win in your life, achieve all your dreams. I really want to see you on top and become the person you have always wanted to be. I believe in you.
+</p>
+
+<p class="fade-text">
+Enjoy your day, baby.Today I can call you all sweet names I know,yes,babes,hunny, You deserve all the love, laughter, and happiness in the world… especially from me 😉💕
+</p>
+
+<p class="fade-text">
+I love you more than words can ever explain my fav S. 💖
+</p>
+
+<button onclick="location.href='index.html'">
+Go Back 🎂
+</button>
+
+</div>
+
+<script>
+// 🎵 Play music after first click (browser safe)
+document.addEventListener("click", function() {
+    document.getElementById("bgMusic").play();
+}, { once: true });
+
+// 💕 Floating Hearts
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+}, 700);
+
+// ✨ Sparkles
+setInterval(() => {
+    let sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.innerHTML = "✨";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = Math.random() * 100 + "vh";
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 4000);
+}, 1200);
+</script>
+
+</body>
+</html>
